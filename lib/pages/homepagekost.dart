@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kostapp/models/city.dart';
 import 'package:kostapp/themekost.dart';
 import 'package:kostapp/widgets/city_cardkost.dart';
 
@@ -58,9 +59,32 @@ class HomePageKost extends StatelessWidget {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    CityCardKost(),
-                    CityCardKost(),
-                    CityCardKost(),
+                    SizedBox(width: 24),
+                    CityCardKost(
+                      City(
+                        id: 1,
+                        imageUrl: 'assets/pic/jkt.png',
+                        name: "Jakarta",
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    CityCardKost(
+                      City(
+                        id: 2,
+                        imageUrl: 'assets/pic/bdo.png',
+                        name: "Bandung",
+                        isPopular: true,
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    CityCardKost(
+                      City(
+                        id: 3,
+                        imageUrl: 'assets/pic/sby.png',
+                        name: "Surabaya",
+                      ),
+                    ),
+                    SizedBox(width: 24),
                   ],
                 ),
               ),
