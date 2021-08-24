@@ -11,6 +11,7 @@ class HomePageKost extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+        bottom: false,
         child: Padding(
           padding: EdgeInsets.symmetric(
             vertical: edge,
@@ -102,6 +103,17 @@ class HomePageKost extends StatelessWidget {
                 ),
               ),
               SpaceCard(),
+              SizedBox(
+                height: 30,
+              ),
+              SpaceCard(),
+              SizedBox(
+                height: 30,
+              ),
+              SpaceCard(),
+              SizedBox(
+                height: 30,
+              ),
             ],
           ),
         ),
