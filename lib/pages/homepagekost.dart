@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kostapp/models/city.dart';
 import 'package:kostapp/themekost.dart';
 import 'package:kostapp/widgets/city_cardkost.dart';
+import 'package:kostapp/widgets/space_card.dart';
 
 class HomePageKost extends StatelessWidget {
   // const HomePageKost({ Key? key }) : super(key: key);
@@ -85,9 +86,22 @@ class HomePageKost extends StatelessWidget {
                       ),
                     ),
                     SizedBox(width: 24),
+                    //NOTE: ini Recommendation
                   ],
                 ),
               ),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: edge,
+                ),
+                child: Text(
+                  'Popular Cities',
+                  style: regularTextStyle.copyWith(
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+              SpaceCard(),
             ],
           ),
         ),
