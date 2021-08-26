@@ -44,7 +44,7 @@ class TipsCard extends StatelessWidget {
             size: 24,
             color: greyColor,
           ),
-        )
+        ),
       ],
     );
   }

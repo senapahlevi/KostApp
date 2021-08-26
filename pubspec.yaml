@@ -74,6 +74,14 @@ flutter:
       - assets/pic/sby.png
       - assets/pic/bottomimage.png
       - assets/pic/star.png
+      - assets/pic/Icon_home_active.png
+      - assets/pic/
+    #  - assets/pic/Icon_card.png
+    #  - assets/pic/Icon_loved.png
+    #  - assets/pic/Icon_mail.png
+    #  - assets/pic/Icon_mail_active.png
+    #  - assets/pic/Icon_love_active.png
+    #  - assets/pic/Icon_card_active.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

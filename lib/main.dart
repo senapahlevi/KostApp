@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:kostapp/pages/homepagekost.dart';
 //import 'package:kostapp/pages/basichome_page.dart';
-import 'package:kostapp/pages/splashkost.dart';
+//import 'package:kostapp/pages/splashkost.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashKostapp(),
+      home: HomePageKost(),
     );
   }
 }
