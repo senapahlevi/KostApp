@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:kostapp/models/city.dart';
+import 'package:kostapp/models/space.dart';
+import 'package:kostapp/models/tips.dart';
 import 'package:kostapp/themekost.dart';
 import 'package:kostapp/widgets/city_cardkost.dart';
 import 'package:kostapp/widgets/space_card.dart';
+import 'package:kostapp/widgets/tips_card.dart';
 
 class HomePageKost extends StatelessWidget {
   // const HomePageKost({ Key? key }) : super(key: key);
@@ -102,17 +105,99 @@ class HomePageKost extends StatelessWidget {
                   ),
                 ),
               ),
-              SpaceCard(),
+              SizedBox(
+                height: 16,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: edge,
+                ),
+                child: Column(
+                  children: [
+                    SpaceCard(
+                      Space(
+                          id: 1,
+                          city: 'Bandung',
+                          imageUrl: 'assets/pic/kuretakeso.png',
+                          name: 'Kuretakeso Kost',
+                          price: 52,
+                          country: 'Indonesia',
+                          rating: 4),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    SpaceCard(
+                      Space(
+                          id: 2,
+                          city: 'Bogor',
+                          imageUrl: 'assets/pic/roemah.png',
+                          name: 'Kuretakeso Kost',
+                          price: 22,
+                          country: 'Indonesia',
+                          rating: 5),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    SpaceCard(
+                      Space(
+                          id: 3,
+                          city: 'Jakarta',
+                          imageUrl: 'assets/pic/darrling.png',
+                          name: 'Darrling\nApartement',
+                          price: 72,
+                          country: 'Indonesia',
+                          rating: 5),
+                    ),
+                  ],
+                ),
+              ),
               SizedBox(
                 height: 30,
               ),
-              SpaceCard(),
-              SizedBox(
-                height: 30,
+              //NOTE: Tips & Guideline
+              Padding(
+                padding: EdgeInsets.only(
+                  left: edge,
+                ),
+                child: Text(
+                  'Tips & Guidance',
+                  style: regularTextStyle.copyWith(
+                    fontSize: 16,
+                  ),
+                ),
               ),
-              SpaceCard(),
               SizedBox(
-                height: 30,
+                height: 16,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: edge,
+                ),
+                child: Column(
+                  children: [
+                    TipsCard(
+                      Tips(
+                        id: 1,
+                        title: 'City Guideline',
+                        imageUrl: 'assets/pic/cg.png',
+                        updatedAt: '20 Apr',
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    TipsCard(
+                      Tips(
+                        id: 2,
+                        title: 'Jakarta Fair ',
+                        imageUrl: 'assets/pic/jf.png',
+                        updatedAt: '20 Apr',
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

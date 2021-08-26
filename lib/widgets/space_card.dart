@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:kostapp/models/city.dart';
+import 'package:kostapp/models/space.dart';
+//import 'package:kostapp/models/city.dart';
 import 'package:kostapp/themekost.dart';
 
 class SpaceCard extends StatelessWidget {
   //const SpaceCard({ Key? key }) : super(key: key);
+
+  final Space space;
+  SpaceCard(this.space);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,7 @@ class SpaceCard extends StatelessWidget {
             child: Stack(
               children: [
                 Image.asset(
-                  'assets/pic/kuretakeso.png',
+                  space.imageUrl,
                   width: 130,
                   height: 102,
                   fit: BoxFit.cover,
@@ -46,7 +50,7 @@ class SpaceCard extends StatelessWidget {
                               width: 23,
                             ),
                             Text(
-                              '4/5',
+                              '${space.rating}/5',
                               style: whiteTextStyle.copyWith(
                                 fontSize: 13,
                               ),
@@ -69,7 +73,7 @@ class SpaceCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Kuretakeso Hott",
+              space.name,
               style: blackTextStyle.copyWith(
                 fontSize: 18,
               ),
@@ -79,7 +83,7 @@ class SpaceCard extends StatelessWidget {
             ),
             Text.rich(
               TextSpan(
-                text: '\$52',
+                text: '\$${space.price}',
                 style: purpleTextStyle.copyWith(
                   fontSize: 16,
                 ),
@@ -97,7 +101,7 @@ class SpaceCard extends StatelessWidget {
               height: 16,
             ),
             Text(
-              "Bandung, Jawa Barat",
+              '${space.city},${space.country}',
               style: greyTextStyle,
             ),
           ],
