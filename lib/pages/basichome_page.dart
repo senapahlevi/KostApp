@@ -146,7 +146,7 @@ class BasicHomePage extends StatelessWidget {
                                       ),
                                       onPressed: () {},
                                     ),
-                                  )
+                                  ),
                                 ],
                               ),
                             );

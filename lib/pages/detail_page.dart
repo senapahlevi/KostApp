@@ -189,8 +189,8 @@ class DetailPage extends StatelessWidget {
                       ),
                       //NoTE : PHOTO
                       Padding(
-                        padding: EdgeInsets.only(
-                          left: edge,
+                        padding: EdgeInsets.symmetric(
+                          horizontal: edge,
                         ),
                         child: Text(
                           'Photo',
@@ -207,12 +207,6 @@ class DetailPage extends StatelessWidget {
                         child: ListView(
                           scrollDirection: Axis.horizontal,
                           children: [
-                            Image.asset(
-                              'assets/pic/phot1.png',
-                              width: 110,
-                              height: 88,
-                              fit: BoxFit.cover,
-                            ),
                             SizedBox(
                               width: edge,
                             ),
@@ -226,7 +220,16 @@ class DetailPage extends StatelessWidget {
                               width: edge,
                             ),
                             Image.asset(
-                              'assets/pic/phot1.png',
+                              'assets/pic/phot2.png',
+                              width: 110,
+                              height: 88,
+                              fit: BoxFit.cover,
+                            ),
+                            SizedBox(
+                              width: edge,
+                            ),
+                            Image.asset(
+                              'assets/pic/phot3.png',
                               width: 110,
                               height: 88,
                               fit: BoxFit.cover,
@@ -238,7 +241,65 @@ class DetailPage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 12,
+                        height: 30,
+                      ),
+                      //NOTE:LOCATION
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: edge,
+                        ),
+                        child: Text(
+                          'Address',
+                          style: regularTextStyle.copyWith(
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 6,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: edge,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'JL Pemuda no.14\nno 5, Bogor',
+                              style: greyTextStyle,
+                            ),
+                            Image.asset(
+                              'assets/pic/map.png',
+                              width: 40,
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 40,
+                      ),
+                      Container(
+                        margin: EdgeInsets.symmetric(
+                          horizontal: edge,
+                        ),
+                        height: 50,
+                        width: MediaQuery.of(context).size.width - (2 * edge),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: Text(
+                            'Book Now',
+                            style: whiteTextStyle.copyWith(fontSize: 18),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 40,
                       ),
                     ],
                   ),
