@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kostapp/themekost.dart';
+import 'package:kostapp/widgets/facility_item.dart';
 
 class DetailPage extends StatelessWidget {
   //const DetailPage({ Key? key }) : super(key: key);
@@ -55,6 +56,7 @@ class DetailPage extends StatelessWidget {
                     color: whiteColor,
                   ),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
                         height: 30,
@@ -136,6 +138,49 @@ class DetailPage extends StatelessWidget {
                                 ),
                               ],
                             )
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      //NOTE: MAIN FACILITIES
+                      Padding(
+                        padding: EdgeInsets.only(
+                          left: edge,
+                        ),
+                        child: Text(
+                          'Main Facilities',
+                          style: regularTextStyle.copyWith(
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: edge,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            FacilityItem(
+                              name: 'kitchen',
+                              imageUrl: 'assets/pic/kitchen.png',
+                              total: 2,
+                            ),
+                            FacilityItem(
+                              name: 'bedroom king size',
+                              imageUrl: 'assets/pic/bedroom.png',
+                              total: 1,
+                            ),
+                            FacilityItem(
+                              name: 'lemari',
+                              imageUrl: 'assets/pic/lemari.png',
+                              total: 1,
+                            ),
                           ],
                         ),
                       ),
