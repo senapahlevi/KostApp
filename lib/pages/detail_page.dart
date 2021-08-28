@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kostapp/pages/error_page.dart';
 import 'package:kostapp/themekost.dart';
 import 'package:kostapp/widgets/facility_item.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -12,7 +13,13 @@ class DetailPage extends StatelessWidget {
       if (await canLaunch(url)) {
         launch(url);
       } else {
-        throw (url);
+        //throw (url); //ini buat kalo ngasih url gaje pindah ke error page(unhandled exception)
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ErrorPage(),
+          ),
+        );
       }
     }
 
@@ -256,7 +263,8 @@ class DetailPage extends StatelessWidget {
                             InkWell(
                               onTap: () {
                                 launchUrl(
-                                    'https://goo.gl/maps/wsJ1LrSnaHhx8SkH7');
+                                  ' ',
+                                );
                               },
                               child: Image.asset(
                                 'assets/pic/map.png',
@@ -277,6 +285,7 @@ class DetailPage extends StatelessWidget {
                         width: MediaQuery.of(context).size.width - (2 * edge),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
+                            primary: purpleColor,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20),
                             ),
