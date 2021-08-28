@@ -1,18 +1,24 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:kostapp/models/city.dart';
 import 'package:kostapp/models/space.dart';
 import 'package:kostapp/models/tips.dart';
+import 'package:kostapp/provider/space_provider.dart';
 import 'package:kostapp/themekost.dart';
 import 'package:kostapp/widgets/bottom_navbar_item.dart';
 import 'package:kostapp/widgets/city_cardkost.dart';
 import 'package:kostapp/widgets/space_card.dart';
 import 'package:kostapp/widgets/tips_card.dart';
+import 'package:provider/provider.dart';
 
 class HomePageKost extends StatelessWidget {
   // const HomePageKost({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var spaceProvider = Provider.of(context);
+    spaceProvider.getRecommendedSpaces();
     return Scaffold(
       body: SafeArea(
         bottom: false,
