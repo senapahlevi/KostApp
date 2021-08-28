@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:kostapp/themekost.dart';
 import 'package:kostapp/widgets/facility_item.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DetailPage extends StatelessWidget {
   //const DetailPage({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    launchUrl(String url) async {
+      if (await canLaunch(url)) {
+        launch(url);
+      } else {
+        throw (url);
+      }
+    }
+
     return Scaffold(
       body: SafeArea(
         child: Stack(
@@ -16,31 +25,6 @@ class DetailPage extends StatelessWidget {
               height: 328,
               width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: edge,
-                vertical: 30,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  InkWell(
-                    //buat back button make pop
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Image.asset(
-                      'assets/pic/btn_back.png',
-                      width: 40,
-                    ),
-                  ),
-                  Image.asset(
-                    'assets/pic/whislist.png',
-                    width: 40,
-                  ),
-                ],
-              ),
             ),
             ListView(
               children: [
@@ -269,9 +253,15 @@ class DetailPage extends StatelessWidget {
                               'JL Pemuda no.14\nno 5, Bogor',
                               style: greyTextStyle,
                             ),
-                            Image.asset(
-                              'assets/pic/map.png',
-                              width: 40,
+                            InkWell(
+                              onTap: () {
+                                launchUrl(
+                                    'https://goo.gl/maps/wsJ1LrSnaHhx8SkH7');
+                              },
+                              child: Image.asset(
+                                'assets/pic/map.png',
+                                width: 40,
+                              ),
                             ),
                           ],
                         ),
@@ -291,7 +281,11 @@ class DetailPage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(20),
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            launchUrl(
+                              'tel:089685247265',
+                            );
+                          },
                           child: Text(
                             'Book Now',
                             style: whiteTextStyle.copyWith(fontSize: 18),
@@ -305,7 +299,32 @@ class DetailPage extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: edge,
+                vertical: 30,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                    //buat back button make pop
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Image.asset(
+                      'assets/pic/btn_back.png',
+                      width: 40,
+                    ),
+                  ),
+                  Image.asset(
+                    'assets/pic/whislist.png',
+                    width: 40,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
