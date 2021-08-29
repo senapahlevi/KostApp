@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kostapp/thembasic.dart';
-//import 'package:google_fonts/google_fonts.dart';
 
 class BasicHomePage extends StatelessWidget {
-  //const ({ Key? key }) : super(key: key);
+//gw delete sena
 
   @override
   Widget build(BuildContext context) {

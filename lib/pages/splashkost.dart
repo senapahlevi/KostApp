@@ -3,8 +3,7 @@ import 'package:kostapp/pages/homepagekost.dart';
 import 'package:kostapp/themekost.dart';
 
 class SplashKostapp extends StatelessWidget {
-  //const SplashKostapp({Key? key}) : super(key: key);
-
+  //gw ganti dari seaprw
   @override
   Widget build(BuildContext context) {
     return Scaffold(
