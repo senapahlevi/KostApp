@@ -3,7 +3,7 @@ import 'package:kostapp/pages/homepagekost.dart';
 import 'package:kostapp/themekost.dart';
 
 class ErrorPage extends StatelessWidget {
-  // const ErrorPage({Key? key}) : super(key: key);
+  //deleted ini
 
   @override
   Widget build(BuildContext context) {
