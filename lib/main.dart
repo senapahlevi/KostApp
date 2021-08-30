@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kostapp/pages/homepagekost.dart';
+//import 'package:kostapp/pages/homepagekost.dart';
 import 'package:kostapp/pages/splashkost.dart';
 import 'package:kostapp/provider/space_provider.dart';
 import 'package:provider/provider.dart';

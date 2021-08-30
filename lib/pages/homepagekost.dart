@@ -1,14 +1,15 @@
-import 'dart:js';
+//import 'dart:js';
 
 import 'package:flutter/material.dart';
 import 'package:kostapp/models/city.dart';
-import 'package:kostapp/models/space.dart';
+//import 'package:kostapp/models/space.dart';
 import 'package:kostapp/models/tips.dart';
 import 'package:kostapp/provider/space_provider.dart';
+//import 'package:kostapp/provider/space_provider.dart';
 import 'package:kostapp/themekost.dart';
 import 'package:kostapp/widgets/bottom_navbar_item.dart';
 import 'package:kostapp/widgets/city_cardkost.dart';
-import 'package:kostapp/widgets/space_card.dart';
+//import 'package:kostapp/widgets/space_card.dart';
 import 'package:kostapp/widgets/tips_card.dart';
 import 'package:provider/provider.dart';
 
@@ -17,7 +18,7 @@ class HomePageKost extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var spaceProvider = Provider.of(context);
+    var spaceProvider = Provider.of<SpaceProvider>(context);
     spaceProvider.getRecommendedSpaces();
     return Scaffold(
       body: SafeArea(
@@ -118,7 +119,7 @@ class HomePageKost extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  SpaceCard(
+                  /* SpaceCard(
                     Space(
                         id: 1,
                         city: 'Bandung',
@@ -127,12 +128,12 @@ class HomePageKost extends StatelessWidget {
                         price: 52,
                         country: 'Indonesia',
                         rating: 4),
-                  ),
+                  ),*/
                   SizedBox(
                     height: 30,
                   ),
-                  SpaceCard(
-                    Space(
+                  /*   SpaceCard(
+                   Space(
                         id: 2,
                         city: 'Bogor',
                         imageUrl: 'assets/pic/roemah.png',
@@ -140,11 +141,11 @@ class HomePageKost extends StatelessWidget {
                         price: 22,
                         country: 'Indonesia',
                         rating: 5),
-                  ),
+                  ),*/
                   SizedBox(
                     height: 30,
                   ),
-                  SpaceCard(
+                  /*  SpaceCard(
                     Space(
                       id: 3,
                       city: 'Jakarta',
@@ -154,7 +155,7 @@ class HomePageKost extends StatelessWidget {
                       country: 'Indonesia',
                       rating: 5,
                     ),
-                  ),
+                  ),*/
                 ],
               ),
             ),
